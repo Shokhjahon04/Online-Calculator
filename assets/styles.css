@@ -1,0 +1,125 @@
+/* ========== ROOTs ========== */
+:root{
+    /* font */
+    --body-font: system-ui, sans-serif;
+
+    /* colors */
+    --body-color: #F1F2F3;
+    --button-main--color: #FFF;
+    --button-blue-color: #4B5EFC;
+    --button-gray-color: #D2D3DA;
+    --border-color: #EAEAEA;
+    --text-color: #000;
+}
+
+/* ========== BASE ========== */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--body-font);
+    background: var(--body-color);
+}
+
+.container{
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+    .container{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+body.dark-theme{
+    /* ========== Dark theme colors */
+    --body-color: #17171C;
+    --button-main--color: #2E2F38;
+    --button-gray-color: #4E505F;
+    --border-color: #333;
+    --text-color: #FFF;
+  }
+  
+  /*========== Button Dark/Light ==========*/
+  .change-theme{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    padding: 5px 6px;
+    border-radius: 50%;
+  }
+
+/* ========== HEADER ========== */
+.container{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 30px 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.display {
+    height: 80px;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: var(--text-color);
+    pointer-events: none;
+    background: var(--body-color);
+}
+
+.buttons-group {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons-group button {
+    color: var(--text-color);
+    padding: 15px 10px;
+    border-radius: 24px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--button-main--color);
+}
+
+.buttons-group button:active {
+    transform: scale(0.99);
+}
+
+.operator-first{
+    background-color: var(--button-gray-color) !important;
+}
+
+.operator {
+    color: #FFF !important;    
+    background-color: var(--button-blue-color) !important;
+}
+
+.description{
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 600px;
+    color: var(--text-color);
+    text-align: center;
+}
